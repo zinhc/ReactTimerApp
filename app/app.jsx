@@ -6,7 +6,7 @@ var Timer = require('Timer');
 var Countdown = require('Countdown');
 //Load foundation 因為不知道載入的是css檔案 所以要在開頭加上css! css-loader,表示是css檔案
 //style 是 css
-require('style!css!foundation-sites/dist/foundation.min.css')
+//require('style!css!foundation-sites/dist/foundation.min.css') 已經在webpackConfig.js加入sassLoader
 $(document).foundation();
 
 // App css

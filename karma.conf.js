@@ -5,7 +5,11 @@ module.exports = function (config) {
     browsers: ['Chrome'],
     singleRun: true,
     frameworks: ['mocha'],
-    files: ['app/tests/**/*.test.jsx'],
+    files: [
+      'node_modules/jquery/dist/jquery.min.js',//karma沒有import jquery 所以看不懂 必須在此import
+      'node_modules/foundation-sites/dist/foundation.min.js',//karma沒有import foundation 必須在此import
+      'app/tests/**/*.test.jsx'
+    ],
     preprocessors: {
       'app/tests/**/*.test.jsx': ['webpack', 'sourcemap']
     },
